@@ -4,14 +4,13 @@ pipeline {
         stage('Build') {
              steps {
                 echo "Build Step"
-            agent {
-                docker {
-                    image 'python:2-alpine' 
-                }
-            }
-            }
-            
-        }
+                agent {
+                   docker {
+                     image 'python:2-alpine' 
+                          }
+                      }
+                  }
+          }
         stage('Test') {
             
              steps {
