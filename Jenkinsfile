@@ -4,6 +4,9 @@ pipeline {
         stage('Build') {
              steps {
                 echo "Build Step"
+                  docker {
+                    image 'python:2-alpine' 
+                }
             }
             
         }
